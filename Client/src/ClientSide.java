@@ -14,7 +14,7 @@ public class ClientSide {
             if (!input.isEmpty()) {
                 out.println(input);
                 String answerMessage = in.readLine();
-                if ("Let's finish this conversation.".equals(input) || null == answerMessage) {
+                if (null == answerMessage) {
                     in.close();
                     out.close();
                     clientSoc.close();
@@ -22,5 +22,6 @@ public class ClientSide {
                     System.out.println(answerMessage);
             }
         }
+        System.out.println("Application terminated.");
     }
 }
